@@ -9,7 +9,7 @@
 docker build -t vvdocker-rails .
 ```
 ### run
-
+```
 docker run -d -p 3000:3000 vvdocker-rails
 ```
 
@@ -19,6 +19,7 @@ docker exec -it vvdocker-rails bash
 ```
 
 ## Dockerfile
+
 ```
 FROM centos:7
 
@@ -71,3 +72,4 @@ RUN bundle config --global path 'vendor/bundle'
 EXPOSE  3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
 ```
+
