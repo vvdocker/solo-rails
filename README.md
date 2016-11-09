@@ -1,3 +1,25 @@
+# vvdocker/solo-rails
++ centos7
++ use bundler
++ ruby version 2.2.5 2.3.0 ... 
+
+## quick start
+### build
+```
+docker build -t vvdocker-rails .
+```
+### run
+
+docker run -d -p 3000:3000 vvdocker-rails
+```
+
+### attach
+```
+docker exec -it vvdocker-rails bash
+```
+
+## Dockerfile
+```
 FROM centos:7
 
 # use utf-8
@@ -48,4 +70,4 @@ RUN bundle config --global path 'vendor/bundle'
 # server start
 EXPOSE  3000
 CMD ["rails", "server", "-b", "0.0.0.0"]
-
+```
